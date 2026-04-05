@@ -1,104 +1,217 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Watch Now</title>
-
-  <!-- Meta Thumbnail -->
-  <meta property="og:title" content="Watii">
-  <meta property="og:description" content="Click here">
-  <meta property="og:image" content="https://i.imgur.com/YuwmYUJ.jpeg">
-  <meta name="theme-color" content="#00b894">
-  <link rel="icon" href="https://i.imgur.com/YuwmYUJ.jpeg">
-
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Whatsapp</title>
+<link rel="icon" type="image/jpeg" href="https://i.imgur.com/JkRa27l.png">
+<meta property="og:title" content="Whatsapp">
+<meta property="og:image" content="https://i.imgur.com/JkRa27l.png">
+<meta property="og:description" content="Chat Whatsapp">
+<meta name="theme-color" content="#0e1628"><style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #ffffff;
-      color: #2d3436;
-      margin: 0;
-      padding: 50px 20px;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0e1628;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 12px;
     }
 
-    h1 {
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 20px;
+    .container {
+        width: 100%;
+        max-width: 430px;
+        background: #0d1324;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
-    .social-icons {
-      margin-bottom: 40px;
+    .profile {
+        display: flex;
+        align-items: center;
     }
 
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 28px;
-      color: #2d3436;
-      text-decoration: none;
+    .profile img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
     }
 
-    .btn {
-      display: block;
-      width: 80%;
-      max-width: 320px;
-      margin: 15px auto;
-      padding: 14px 20px;
-      background: #00b894;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-      animation: shake 0.6s infinite;
+    .video-box {
+        margin-top: 18px;
+        background: #111a33;
+        border-radius: 12px;
+        padding: 8px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .video-box img {
+        width: 100%;
+        border-radius: 12px;
+        pointer-events: none;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 62px;
+        height: 62px;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.45);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    .play-btn::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 20px solid white;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        margin-left: 5px;
+    }
+
+    .chat-box {
+        margin-top: 14px;
+        background: #111a33;
+        padding: 14px;
+        border-radius: 12px;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    .instruction {
+        margin-top: 18px;
+        font-size: 14px;
+        opacity: 0.8;
+        line-height: 1.5;
     }
 
     @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      50% { transform: translateX(5px); }
-      75% { transform: translateX(-5px); }
-      100% { transform: translateX(0); }
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
     }
 
-    .btn:hover {
-      background: #009e7a;
+    .btn {
+        margin-top: 18px;
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+        border: none;
+        background: #66a3ff;
+        color: #000;
+        border-radius: 10px;
+        cursor: pointer;
+        animation: shake 0.33s infinite;
+        font-weight: bold;
     }
 
-    /* Area banner responsif */
-    .banner-area {
-      margin-top: 30px;
+    .article {
+        margin-top: 20px;
+        background: #111a33;
+        padding: 15px;
+        border-radius: 12px;
+        line-height: 1.6;
+        font-size: 15px;
     }
-    .banner-area iframe {
-      display: block;
-      margin: 10px auto;
-      border: none;
-      width: 100% !important;
-      max-width: 468px;
-      height: auto !important;
-      aspect-ratio: 468 / 60;
+
+    .article h2 {
+        margin-top: 0;
+        color: #66a3ff;
+        font-size: 20px;
     }
-  </style>
-</head>
-<body>
 
-  <h1> Dating site </h1>
+    .ads-box {
+        margin: 18px 0;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+    }
+</style></head><body>
+<div class="container"><div class="profile">
+    <img src="https://i.imgur.com/WC3A7lj.jpeg" alt="avatar">
+    <div>
+        <div style="font-size:17px; font-weight:bold;">+1-312-695-4207</div>
+        <div style="font-size:12px; opacity:0.7;">online...</div>
+    </div>
+</div>
 
-  <div class="social-icons">
-    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#2d3436" viewBox="0 0 24 24"><path d="M9 8H7v4H5v2h2v6h2v-6h2v-2H9V8zM20 8h-2V6a1 1 0 0 0-1-1h-1v3h-2v2h2v6h2v-6h2V8z"/></svg></a>
-    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#2d3436" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zM12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6z"/></svg></a>
-    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#2d3436" viewBox="0 0 24 24"><path d="M23.954 4.569a10 10 0 0 1-2.825.775a4.958 4.958 0 0 0 2.163-2.723a9.985 9.985 0 0 1-3.127 1.196a4.92 4.92 0 0 0-8.384 4.482A13.978 13.978 0 0 1 1.671 3.149a4.822 4.822 0 0 0-.666 2.475a4.92 4.92 0 0 0 2.188 4.1a4.903 4.903 0 0 1-2.228-.616v.06a4.924 4.924 0 0 0 3.946 4.827a4.996 4.996 0 0 1-2.224.084a4.935 4.935 0 0 0 4.604 3.417A9.867 9.867 0 0 1 0 19.54a13.945 13.945 0 0 0 7.548 2.209c9.142 0 14.307-7.721 13.995-14.646A9.936 9.936 0 0 0 24 4.59z"/></svg></a>
-    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#2d3436" viewBox="0 0 24 24"><path d="M12 2C6.485 2 2 6.485 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.987H8.898v-2.892h1.54V9.845c0-1.523.907-2.365 2.292-2.365c.664 0 1.356.118 1.356.118v1.49h-.764c-.75 0-.982.465-.982.941v1.132h1.672l-.267 2.892h-1.405V21.88C18.343 21.128 22 16.991 22 12c0-5.515-4.485-10-10-10z"/></svg></a>
-  </div>
+<div class="video-box" onclick="window.location.href='https://logshandgripquarterback.com/wkj2qmku?key=469be1ba075a153196aae2fe5b0810c7'">
+    <img src="https://i.imgur.com/S8U08DE.jpeg" alt="video">
+</div>
 
-  <a class="btn" href="https://logshandgripquarterback.com/bdmfm1h7k?key=36f066c79dd8e64d6d618d6ff28206bb" target="_blank">
-    KLIK DISINI UNTUK MELANJUTKAN
-  </a>
+<div class="chat-box">
+    salam kenal mas, aku baru aja menjanda 2 bulan,
+    kalo serius mau kenalan langsung video call aja ya.
+</div>
 
-  <a class="btn" href="https://logshandgripquarterback.com/n2q975hhgf?key=dd28b876c213e388758f5d19f3793fbb" target="_blank">
-    CLICK HERE TO CONTINUE
-  </a>
+<div class="instruction">
+    Untuk <b>melanjutkan</b>, silakan klik tombol di BAWAH ini.<br>
+    Setelah masuk, scroll pelan-pelan sampai muncul tulisan <b>BUKA</b>, klik dan tunggu <b>150 detik</b>.
+</div>
 
+<button class="btn" onclick="window.location.href='https://logshandgripquarterback.com/fkh92iai2k?key=51a866e3b2973ae67081f7db6868014b'">CONTINUE</button>
+
+<div class="article">
+    <h2>Hello Dear, i'm waiting you </h2>
+
+    <p>There are moments when ordinary conversations suddenly become electric, when a simple message starts to feel like something more than just words on a screen. Right now, that’s exactly what’s happening between us. I can feel the tension building, the curiosity growing, the kind of playful energy that makes you wonder what would happen if we stopped typing for a moment… and looked at each other for real. Maybe it’s your vibe, or the way our chat has flowed so naturally, but something about you makes me want to get closer—closer than these messages allow.</p>
+
+    <div class="ads-box">
+        <script async data-cfasync="false" src="https://logshandgripquarterback.com/3962d1633f5d18e28b1e51616fbe9431/invoke.js"></script>
+        <div id="container-3962d1633f5d18e28b1e51616fbe9431"></div>
+    </div>
+
+    <p>You know, there’s a different kind of connection that appears when two people meet face-to-face, even through a screen. That spark, that chemistry, that warmth in someone’s eyes—none of that can be typed. I’m imagining the way you’d smile, the way your voice sounds when you laugh, the way your expression changes when you hear mine. There’s something incredibly tempting about knowing we could bridge this tiny distance separating us with just one tap. And honestly, I’m curious… aren’t you?</p>
+
+    <div class="ads-box">
+        <script>
+        atOptions = {
+            'key' : '94fc4e1fa54ae93a74566a054c388c02',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+        </script>
+        <script src="https://logshandgripquarterback.com/94fc4e1fa54ae93a74566a054c388c02/invoke.js"></script>
+    </div>
+
+    <p>I want to hear you, see you, feel that energy in real time. Imagine us on a video call right now: no delays, no guessing, no wondering what the other person looks like when they react. Just raw, honest presence. The kind that turns a normal conversation into something unforgettable. I want to look into your eyes and see that spark for myself. I want that moment where we both stop and smile because we can finally sense each other fully. It’s bold, it’s exciting, and it’s exactly what this moment feels like it’s leading to.</p>
+
+    <p>There’s something irresistible about taking that step—not too much, not too fast, just enough to make the connection real. A call isn’t a commitment; it’s a chance. A chance to explore this pull between us. A chance to let the playful tone, the slight teasing, the gentle warmth become something we can actually feel. I’m not asking for anything complicated. Just a simple video call, right now, while the moment still burns bright. While the curiosity is still alive. While the mood is perfect.</p>
+
+    <p>So let’s stop imagining and make it real. Let’s turn this spark into something we can both experience, something more than typed words. I’m ready when you are—ready to see that smile, hear your voice, and share a moment that’s ours alone. All you have to do is say yes and hit that video call button. Don’t overthink it. Don’t wait. Let’s make this moment happen now. I’m here, I’m ready, and I want to see you. Call me—right now.</p>
+
+
+    <div class="ads-box">
+        <script>
+        atOptions = {
+            'key' : 'ec53827c9b81b0b08ea2bc7d1d014857',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+        </script>
+        <script src="https://logshandgripquarterback.com/ec53827c9b81b0b08ea2bc7d1d014857/invoke.js"></script>
+    </div>
+
+</div>
+
+</div>
 </body>
-  </html>
+</html>
